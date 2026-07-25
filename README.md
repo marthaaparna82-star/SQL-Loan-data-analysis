@@ -1,20 +1,25 @@
-# Customer Loan Data Analysis Project (SQL)
+# End-to-End Customer Loan Analytics Pipeline (Python ➔ SQL Server)
 
 ##  Project Overview
-This repository contains an end-to-end SQL data analysis project designed to extract actionable business insights from a retail loan portfolio. The project spans over 15 distinct business scenarios, assessing key metrics like loan volumes, risk distributions, regional growth, and sales performance.
+This repository contains a comprehensive data pipeline project analyzing a retail consumer loan portfolio. The project encompasses raw data ingestion, programmatic data cleaning, database connection automation via Python, and an intensive analytical breakdown of 15+ complex business scenarios using T-SQL.
 
 ## Tech Stack & Skills Demonstrated
-- **Database Engine:** Microsoft SQL Server (T-SQL)
-- **SQL Mechanics:** CTEs, Window Functions (`DENSE_RANK`, `RANK`), Grouping & Aggregations, Conditional Logic (`CASE WHEN`), and Date Functions (`DATEPART`).
+- **Data Cleaning & EDA:** python(Pandas, Numpy, Matplotlib, Seaborn
+-  **Database Engine & Connection:** Microsoft SQL Server (T-SQL), Database Connection Drivers
+- **Advanced SQL Features:** Common Table Expressions (CTEs), Window Functions (`DENSE_RANK`, `RANK`), Conditional Logic (`CASE WHEN`), and Time-Series Aggregations.
+
+## Database Pipeline Connection
+- Established a secure data interface linking the Python environment directly to Microsoft SQL Server.
+- Automated the extraction and operational upload of the fully scrubbed dataset into the target schema table `dbo.customer_loan_cleaned`.
 
 ##  Key Queries & Analytical Focus
-1. **Basic Portfolio KPIs:** Summarizing total applications, approval rates, and total rejection rates.
-2. **Geographic & Product Analysis:** Drilling down into city/regional performance and tracking high-value loan schemes.
-3. **Risk Segmentation:** Using interest rates (`roi`) to bucket active loans into Low, Medium, and High-Risk tiers.
-4. **Performance Leaderboards:** Ranking individual sales representatives dynamically within their assigned manager teams.
-5. **Channel Efficiency:** Identifying the top 5 dealership streams bringing in the highest loan volumes.
+- **Portfolio Health Evaluation:** Tracked high-level approval percentages versus raw application volume.
+- **Risk Portfolio Segmentation:** Grouped accounts into actionable Low, Medium, and High-Risk tranches using conditional metrics.
+- **Operational Performance Rankings:** Evaluated team member capabilities through analytical leaderboard window rankings.
+- **Channel Delivery Metrics:** Identified the top 5 distinct dealerships driving loan disbursement trends.
 
 ## How to Use
-1. Clone or download this repository to your computer.
-2. Open the `loan-data-analysis.sql` script inside SQL Server Management Studio (SSMS).
-3. Run the script against your database to see the results.
+1. Clone or download this repository to your desktop machine.
+2. Run your Python data cleaning script to preprocess and push the sanitized table directly to your database instance.
+3. Open the `loan-data-analysis.sql` script inside SQL Server Management Studio (SSMS).
+4. Execute the analytical queries against your database schema to inspect the business insights.
